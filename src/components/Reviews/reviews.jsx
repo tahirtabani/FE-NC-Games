@@ -31,6 +31,7 @@ export default function ReviewsPage() {
               // designer,
               // review_id,
               review_body,
+
               //   created_at,
               comment_count,
               votes,
@@ -38,13 +39,34 @@ export default function ReviewsPage() {
               return (
                 <Col className="d-flex">
                   <Card key={title} className="Reviews">
-                    <Card.Img variant="top" src={review_img_url} />
+                    <Card.Img
+                      width={250}
+                      height={400}
+                      variant="top"
+                      src={review_img_url}
+                    />
                     <Card.Body>
                       <Card.Title>{title}</Card.Title>
-                      <Card.Text>Catergory:{category}</Card.Text>
-                      <Card.Text>No of comments:{comment_count}</Card.Text>
-                      <Card.Text>No of Votes:{votes}</Card.Text>
-                      <Card.Text>Review:{review_body}</Card.Text>
+                      <Card.Text>
+                        <span style={{ fontWeight: "bold" }}>Category</span> :
+                        {category}
+                      </Card.Text>
+                      <Card.Text>
+                        <span style={{ fontWeight: "bold" }}>
+                          Number of Comments
+                        </span>
+                        :{comment_count}
+                      </Card.Text>
+                      <Card.Text>
+                        <span style={{ fontWeight: "bold" }}>
+                          Number of votes
+                        </span>
+                        :{votes}
+                      </Card.Text>
+                      <Card.Text>
+                        <span style={{ fontWeight: "bold" }}>Review</span> :
+                        {review_body.substring(0, 100)}...
+                      </Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>

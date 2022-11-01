@@ -3,7 +3,7 @@ import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
 
 function Layout() {
-  const { collapseSidebar } = useProSidebar();
+  const { collapseSidebar, collapsed } = useProSidebar();
 
   return (
     <div style={{ display: "flex", height: "100%" }}>
@@ -12,15 +12,14 @@ function Layout() {
           <MenuItem routerLink={<Link to="/reviews" />}>
             View all reviews
           </MenuItem>
-          <MenuItem routerLink={<Link to="/calendar" />}> Calendar</MenuItem>
-          <MenuItem routerLink={<Link to="/e-commerce" />}>
-            {" "}
-            E-commerce
+          <MenuItem routerLink={<Link to="/calendar" />}>
+            {collapsed ? <>&#128214;</> : "Calendar"}
           </MenuItem>
+          <MenuItem routerLink={<Link to="/e-commerce" />}>E-commerce</MenuItem>
         </Menu>
       </Sidebar>
       <main>
-        <button onClick={() => collapseSidebar()}>Collapse</button>
+        <button onClick={() => collapseSidebar()}>☰</button>
       </main>
     </div>
   );

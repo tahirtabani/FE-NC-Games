@@ -1,0 +1,32 @@
+/* .partTextBold {
+  font-weight: bold !important;
+
+  color: darkblue !important;
+
+  background-color: blueviolet;
+} */
+
+/* .photo {
+    height: 200px;
+    width: 200px;
+  } */
+
+/* @media only screen and (min-width: 600px) {
+    .photo {
+     height: ;
+    }
+  } */
+
+/* Card.Img {
+  width: 250px;
+  height: 400px;
+}
+
+@media only screen and (min-width: 600px) {
+  Card.Img {
+    background-color: blueviolet;
+    height: 50px;
+  }
+} */
+
+/* issue with handling CSS with bootstrap ask for help */
