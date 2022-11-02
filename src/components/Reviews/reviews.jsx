@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 import { getReviews } from "../../utils/api";
 
 export default function ReviewsPage() {
@@ -40,13 +41,12 @@ export default function ReviewsPage() {
                 <Col className="d-flex">
                   <Card key={title} className="Reviews">
                     <Card.Img
-                      width={250}
-                      height={400}
+                      className="Image"
                       variant="top"
                       src={review_img_url}
                     />
-                    <Card.Body>
-                      <Card.Title>{title}</Card.Title>
+                    <Card.Body className="Cardbody">
+                      <Card.Title className="CardTitle">{title}</Card.Title>
                       <Card.Text>
                         <span style={{ fontWeight: "bold" }}>Category</span> :
                         {category}
@@ -67,6 +67,13 @@ export default function ReviewsPage() {
                         <span style={{ fontWeight: "bold" }}>Review</span> :
                         {review_body.substring(0, 100)}...
                       </Card.Text>
+                      <a
+                        rel="stylesheet"
+                        href="https://tahir-nc-games-back-end-api.herokuapp.com/api/reviews/:review_id"
+                        //change this to the review for each page
+                      >
+                        <Button variant="primary">See Full Review</Button>
+                      </a>
                     </Card.Body>
                   </Card>
                 </Col>

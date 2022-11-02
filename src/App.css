@@ -38,6 +38,22 @@
 }
 
 #logo {
-  width: 80px;
-  height: 60px;
+  width: 150px;
+  height: 70px;
+}
+
+.CardTitle {
+  color: grey;
+}
+
+.Image {
+  height: 400px;
+  width: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+  .Reviews img {
+    color: blueviolet;
+    height: 200px;
+  }
 }
