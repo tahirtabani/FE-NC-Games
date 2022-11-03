@@ -12,6 +12,8 @@ export default function CategoriesPage() {
   useEffect(() => {
     setLoading(true);
     getCategories().then((response) => {
+      console.log("response: ", response);
+
       setCategories(response);
       setLoading(false);
     });
@@ -20,6 +22,7 @@ export default function CategoriesPage() {
   if (isLoading) return <h3>...loading</h3>;
   return (
     <div>
+      <h2>Welcome to all the categories</h2>
       <ul>
         <Row lg={3}>
           {categories.map(({ slug, description }) => {
@@ -42,7 +45,7 @@ export default function CategoriesPage() {
 
                     <a
                       rel="stylesheet"
-                      href="/reviews/{slug}"
+                      href={`/reviews/${slug}`}
                       //change this to the review for each page
                     >
                       <Button variant="primary">

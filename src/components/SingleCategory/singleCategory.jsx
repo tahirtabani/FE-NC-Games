@@ -1,29 +1,31 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { getReviews } from "../../utils/api";
+import { getCategories, getReviews } from "../../utils/api";
 
-export default function ReviewsPage() {
-  const [reviews, setReviews] = useState([{}]);
+export default function SingleCategoriesPage() {
+  const [singleCategory, setSingleCategory] = useState([{}]);
   const [isLoading, setLoading] = useState(true);
+  const { category } = useParams();
 
   useEffect(() => {
     setLoading(true);
-    getReviews().then((response) => {
-      setReviews(response);
+    getReviews(category).then((response) => {
+      setSingleCategory(response);
       setLoading(false);
     });
-  }, []);
+  }, [category]);
 
   if (isLoading) return <h3>...loading</h3>;
   return (
     <div>
-      <h2>Welcome to all the reviews</h2>
+      <h2>Welcome to review for {category}</h2>
       <ul>
         <Row lg={3}>
-          {reviews.map(
+          {singleCategory.map(
             ({
               review_img_url,
               title,
