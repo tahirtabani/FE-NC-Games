@@ -4,13 +4,11 @@ const api = axios.create({
   baseURL: "https://tahir-nc-games-back-end-api.herokuapp.com/api",
 });
 
-export function getReviews() {
+export function getReviews(category) {
   return api
     .get(`/reviews`, {
       params: {
         category,
-        sort_by,
-        order,
       },
     })
     .then(({ data }) => {
