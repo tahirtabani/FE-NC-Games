@@ -12,8 +12,6 @@ export default function CategoriesPage() {
   useEffect(() => {
     setLoading(true);
     getCategories().then((response) => {
-      console.log("response: ", response);
-
       setCategories(response);
       setLoading(false);
     });

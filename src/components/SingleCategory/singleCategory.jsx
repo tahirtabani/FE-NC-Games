@@ -30,12 +30,7 @@ export default function SingleCategoriesPage() {
               review_img_url,
               title,
               category,
-              // owner,
-              // designer,
-              // review_id,
               review_body,
-
-              //   created_at,
               comment_count,
               votes,
             }) => {
