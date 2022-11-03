@@ -1,11 +1,18 @@
+.Title-container {
+  display: flex;
+  background-color: rgb(192, 45, 26);
+}
+
 .Title {
   box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   padding: 1em;
   margin-bottom: 2em;
-  background-color: rgb(192, 45, 26);
   color: #fff;
 }
+
+/* .Sidebar {
+} */

@@ -12,7 +12,6 @@ export default function ReviewsPage() {
   useEffect(() => {
     setLoading(true);
     getReviews().then((response) => {
-      console.log("reviews: ", response);
       setReviews(response);
       setLoading(false);
     });

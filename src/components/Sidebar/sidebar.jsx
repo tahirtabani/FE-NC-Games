@@ -10,13 +10,13 @@ function Layout() {
       <Sidebar>
         <Menu>
           <MenuItem routerLink={<Link to="/home" />}>
-            {collapsed ? <>&#128214;</> : "Home"}
+            {collapsed ? <>🏠</> : "Home"}
           </MenuItem>
           <MenuItem routerLink={<Link to="/reviews" />}>
             {collapsed ? <>&#128214;</> : "View all reviews"}
           </MenuItem>
-          <MenuItem routerLink={<Link to="/catgeories" />}>
-            {collapsed ? <>&#128214;</> : "Categories"}
+          <MenuItem routerLink={<Link to="/categories" />}>
+            {collapsed ? <>📋</> : "Categories"}
           </MenuItem>
         </Menu>
       </Sidebar>
