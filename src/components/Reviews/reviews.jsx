@@ -28,12 +28,8 @@ export default function ReviewsPage() {
               review_img_url,
               title,
               category,
-              // owner,
-              // designer,
-              // review_id,
+              review_id,
               review_body,
-
-              //   created_at,
               comment_count,
               votes,
             }) => {
@@ -69,7 +65,7 @@ export default function ReviewsPage() {
                       </Card.Text>
                       <a
                         rel="stylesheet"
-                        href="https://tahir-nc-games-back-end-api.herokuapp.com/api/reviews/:review_id"
+                        href={`/reviews/${review_id}`}
                         //change this to the review for each page
                       >
                         <Button variant="primary">See Full Review</Button>

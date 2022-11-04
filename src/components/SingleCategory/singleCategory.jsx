@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import { getCategories, getReviews } from "../../utils/api";
+import { getReviews } from "../../utils/api";
 
 export default function SingleCategoriesPage() {
   const [singleCategory, setSingleCategory] = useState([{}]);
@@ -33,6 +33,7 @@ export default function SingleCategoriesPage() {
               review_body,
               comment_count,
               votes,
+              review_id,
             }) => {
               return (
                 <Col className="d-flex">
@@ -66,7 +67,7 @@ export default function SingleCategoriesPage() {
                       </Card.Text>
                       <a
                         rel="stylesheet"
-                        href="https://tahir-nc-games-back-end-api.herokuapp.com/api/reviews/:review_id"
+                        href={`/reviews/${review_id}`}
                         //change this to the review for each page
                       >
                         <Button variant="primary">See Full Review</Button>
