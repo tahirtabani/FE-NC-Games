@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { getReviewById } from "../../utils/api";
+import Votes from "../Votes/votes";
 
 export default function SingleReview() {
   const [singleReview, setSingleReview] = useState({});
@@ -55,6 +56,11 @@ export default function SingleReview() {
                   <Button variant="primary">See all Comments</Button>
                 </a>
               </Card.Body>
+              Votes:
+              <Votes
+                review_id={singleReview.review_id}
+                votes={singleReview.votes}
+              />
             </Card>
           </Col>
         </Row>

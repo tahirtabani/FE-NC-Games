@@ -27,3 +27,9 @@ export function getReviewById(review_id) {
     return data.review;
   });
 }
+
+export const patchVotes = (review_id, votes) => {
+  return api.patch(`/reviews/${review_id}`, votes).then(({ data }) => {
+    return data.reviews;
+  });
+};
