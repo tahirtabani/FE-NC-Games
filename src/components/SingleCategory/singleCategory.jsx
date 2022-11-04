@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { getReviews } from "../../utils/api";
+import Votes from "../Votes/votes";
 
 export default function SingleCategoriesPage() {
   const [singleCategory, setSingleCategory] = useState([{}]);
