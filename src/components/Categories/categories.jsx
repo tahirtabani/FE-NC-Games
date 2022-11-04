@@ -43,7 +43,7 @@ export default function CategoriesPage() {
 
                     <a
                       rel="stylesheet"
-                      href={`/reviews/${slug}`}
+                      href={`/reviews/categories/${slug}`}
                       //change this to the review for each page
                     >
                       <Button variant="primary">

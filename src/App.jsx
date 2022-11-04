@@ -9,6 +9,8 @@ import HomePage from "./components/Home/home";
 import "./components/Home/home.css";
 import CategoriesPage from "./components/Categories/categories";
 import SingleCategoriesPage from "./components/SingleCategory/singleCategory";
+import SingleReview from "./components/SingleReview/singleReview";
+import "./components/SingleReview/singleReview.css";
 
 function App() {
   return (
@@ -18,7 +20,11 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/categories" element={<CategoriesPage />} />
-        <Route path="/reviews/:category" element={<SingleCategoriesPage />} />
+        <Route
+          path="/reviews/categories/:category"
+          element={<SingleCategoriesPage />}
+        />
+        <Route path="/reviews/:review_id" element={<SingleReview />} />
       </Routes>
     </div>
   );
