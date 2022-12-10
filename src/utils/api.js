@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://tahir-nc-games-back-end-api.herokuapp.com/api",
+  baseURL: "https://tahirncgames.cyclic.app/api/",
 });
 
 export function getReviews(category) {
@@ -33,3 +33,9 @@ export const patchVotes = (review_id, votes) => {
     return data.reviews;
   });
 };
+
+export function getCommentById(review_id) {
+  return api.get(`/reviews/${review_id}/comments`).then(({ data }) => {
+    return data.comments;
+  });
+}

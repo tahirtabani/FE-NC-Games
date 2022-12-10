@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { getReviewById } from "../../utils/api";
 import Votes from "../Votes/votes";
+import Comments from "../Comments/Comments";
 
 export default function SingleReview() {
   const [singleReview, setSingleReview] = useState({});

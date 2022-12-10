@@ -1,6 +1,7 @@
 .Title-container {
   display: flex;
-  background-color: rgb(192, 45, 26);
+  /* background-color: rgb(192, 45, 26); */
+  background-color: #eca1a6;
 }
 
 .Title {

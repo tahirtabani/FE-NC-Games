@@ -11,10 +11,11 @@ import CategoriesPage from "./components/Categories/categories";
 import SingleCategoriesPage from "./components/SingleCategory/singleCategory";
 import SingleReview from "./components/SingleReview/singleReview";
 import "./components/SingleReview/singleReview.css";
+import Comments from "./components/Comments/Comments";
 
 function App() {
   return (
-    <div>
+    <div className="MainPage">
       <Title />
 
       <Routes>
@@ -26,6 +27,7 @@ function App() {
           element={<SingleCategoriesPage />}
         />
         <Route path="/reviews/:review_id" element={<SingleReview />} />
+        <Route path="/reviews/:review_id/comments" element={<Comments />} />
       </Routes>
     </div>
   );
